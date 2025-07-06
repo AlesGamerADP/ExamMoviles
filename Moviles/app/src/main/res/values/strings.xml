@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Poke Matcher</string>
+
+    <!-- Strings requeridos por activity_login.xml -->
+    <string name="user_email">Correo electrónico</string>
+    <string name="user_password">Contraseña</string>
+    <string name="start_session">INICIAR SESIÓN</string>
+    <string name="register_me">REGISTRARME</string>
+
+    <!-- Nuevos strings para el tema neón -->
+    <string name="app_title">POKE MATCHER</string>
+    <string name="app_subtitle">Encuentra tu Pokémon perfecto</string>
+    <string name="create_account">CREAR CUENTA</string>
+    <string name="join_community">Únete a la comunidad Pokémon</string>
+    <string name="confirm_password">CONFIRMAR CONTRASEÑA</string>
+    <string name="repeat_password">Repetir contraseña</string>
+    <string name="register_action">REGISTRAR</string>
+    <string name="already_have_account">YA TENGO UNA CUENTA</string>
+    
+    <!-- Strings para la pantalla principal -->
+    <string name="swipe_to_discover">Desliza para descubrir Pokémon</string>
+    <string name="like_action">Like</string>
+    <string name="dislike_action">Dislike</string>
+    <string name="super_like_action">Super Like</string>
+    
+    <!-- Strings para las tarjetas de Pokémon -->
+    <string name="pokemon_type">Tipo Eléctrico</string>
+    <string name="hp_label">HP:</string>
+    <string name="attack_label">ATK:</string>
+    <string name="defense_label">DEF:</string>
+    
+    <!-- Mensajes de estado -->
+    <string name="loading_pokemon">Cargando Pokémon...</string>
+    <string name="no_more_pokemon">No hay más Pokémon disponibles</string>
+    <string name="match_found">¡Match encontrado!</string>
+    <string name="try_again">Inténtalo de nuevo</string>
+</resources>

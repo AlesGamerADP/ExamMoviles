@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/selectableItemBackground"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="false"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="15dp"
+    app:cardBackgroundColor="@color/background_card">
+
+    <!-- Fondo con gradiente -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_neon_background" />
+
+    <!-- Imagen de fondo con overlay -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/jardin"
+        android:alpha="0.3" />
+
+    <!-- Overlay oscuro para mejor legibilidad -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_dark"
+        android:alpha="0.4" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <!-- Header con nombre y tipo -->
+        <LinearLayout
+            android:id="@+id/headerInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Nombre del Pokémon -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_primary"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:shadowColor="@color/primary_neon"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="4"
+                    tools:text="Pikachu" />
+
+                <ImageView
+                    android:id="@+id/ivVerified"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/verified"
+                    android:alpha="0.8" />
+
+            </LinearLayout>
+
+            <!-- Tipo del Pokémon -->
+            <TextView
+                android:id="@+id/tvType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo Eléctrico"
+                android:textColor="@color/text_neon"
+                android:textSize="16sp"
+                android:fontFamily="monospace"
+                android:background="@drawable/button_neon_secondary"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:layout_marginBottom="15dp" />
+
+        </LinearLayout>
+
+        <!-- Imagen principal del Pokémon -->
+        <ImageView
+            android:id="@+id/ivPokemon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/card_neon_background"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/headerInfo"
+            app:layout_constraintBottom_toTopOf="@+id/statsLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:src="@drawable/charizard" />
+
+        <!-- Estadísticas del Pokémon -->
+        <LinearLayout
+            android:id="@+id/statsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_neon_background"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- HP -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="HP:"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/background_card"
+                    android:layout_marginHorizontal="10dp" />
+
+                <View
+                    android:id="@+id/hpBar"
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"
+                    android:layout_weight="0.7"
+                    android:background="@color/success_green"
+                    android:layout_marginEnd="10dp" />
+
+                <TextView
+                    android:id="@+id/tvHp"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="85"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <!-- Attack -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="ATK:"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/background_card"
+                    android:layout_marginHorizontal="10dp" />
+
+                <View
+                    android:id="@+id/attackBar"
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"
+                    android:layout_weight="0.9"
+                    android:background="@color/like_color"
+                    android:layout_marginEnd="10dp" />
+
+                <TextView
+                    android:id="@+id/tvAttack"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="110"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <!-- Defense -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="DEF:"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/background_card"
+                    android:layout_marginHorizontal="10dp" />
+
+                <View
+                    android:id="@+id/defenseBar"
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"
+                    android:layout_weight="0.6"
+                    android:background="@color/super_like_color"
+                    android:layout_marginEnd="10dp" />
+
+                <TextView
+                    android:id="@+id/tvDefense"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="76"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PokeTinder202501" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Colores principales del tema neón (modo nocturno) -->
+        <item name="colorPrimary">@color/primary_neon</item>
+        <item name="colorPrimaryVariant">@color/accent_neon</item>
+        <item name="colorSecondary">@color/secondary_neon</item>
+        <item name="colorSecondaryVariant">@color/super_like_color</item>
+        
+        <!-- Colores de fondo (más oscuros para modo nocturno) -->
+        <item name="android:colorBackground">@color/background_dark</item>
+        <item name="colorSurface">@color/background_card</item>
+        <item name="colorSurfaceVariant">@color/background_glass</item>
+        
+        <!-- Colores de texto -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorTertiary">@color/text_neon</item>
+        
+        <!-- Colores de estado -->
+        <item name="colorError">@color/error_red</item>
+        <item name="colorOnError">@color/text_primary</item>
+        
+        <!-- Configuraciones adicionales -->
+        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:navigationBarColor">@color/background_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        
+        <!-- Configuración de fuente -->
+        <item name="android:fontFamily">monospace</item>
+    </style>
+
+    <style name="Theme.PokeTinder202501" parent="Base.Theme.PokeTinder202501" />
+</resources>

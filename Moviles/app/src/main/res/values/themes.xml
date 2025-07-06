@@ -1,0 +1,78 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PokeTinder202501" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Colores principales del tema neón -->
+        <item name="colorPrimary">@color/primary_neon</item>
+        <item name="colorPrimaryVariant">@color/accent_neon</item>
+        <item name="colorSecondary">@color/secondary_neon</item>
+        <item name="colorSecondaryVariant">@color/super_like_color</item>
+        
+        <!-- Colores de fondo -->
+        <item name="android:colorBackground">@color/background_dark</item>
+        <item name="colorSurface">@color/background_card</item>
+        <item name="colorSurfaceVariant">@color/background_glass</item>
+        
+        <!-- Colores de texto -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorTertiary">@color/text_neon</item>
+        
+        <!-- Colores de estado -->
+        <item name="colorError">@color/error_red</item>
+        <item name="colorOnError">@color/text_primary</item>
+        
+        <!-- Configuraciones adicionales -->
+        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:navigationBarColor">@color/background_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        
+        <!-- Configuración de fuente -->
+        <item name="android:fontFamily">monospace</item>
+    </style>
+
+    <style name="Theme.PokeTinder202501" parent="Base.Theme.PokeTinder202501" />
+    
+    <!-- Estilo para botones neón -->
+    <style name="NeonButton" parent="Widget.Material3.Button">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/button_neon_primary</item>
+        <item name="android:padding">15dp</item>
+    </style>
+    
+    <!-- Estilo para botones secundarios neón -->
+    <style name="NeonButtonSecondary" parent="Widget.Material3.Button">
+        <item name="android:textColor">@color/text_neon</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/button_neon_secondary</item>
+        <item name="android:padding">15dp</item>
+    </style>
+    
+    <!-- Estilo para campos de texto neón -->
+    <style name="NeonEditText" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_secondary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:background">@drawable/edit_text_neon</item>
+        <item name="android:padding">15dp</item>
+    </style>
+    
+    <!-- Estilo para títulos neón -->
+    <style name="NeonTitle">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:shadowColor">@color/primary_neon</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+</resources>
